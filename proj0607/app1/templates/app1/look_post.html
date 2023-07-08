@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'app1/style.css' %}">
+</head>
+<body>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="info">
+            {% for post in posts %}
+            {% for com in comment %}
+            <div class="deta">
+                <p>{{post.name}}</p>
+                <p>{{post.post}}</p>
+                <p>{{com.text_of_comment}}</p>
+                <p>{{com.comment}}</p>
+                <a class="button" href="/">Create comment</a>
+
+            </div>
+            {% endfor %}
+            {% endfor %}
+        </div>
+        
+    </form>
+    
+</body>
+</html>
