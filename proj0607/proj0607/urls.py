@@ -21,6 +21,6 @@ from app1.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',create_post),
-    path('all/',look_posts),
-    path('comm/',create_comment)
+    path('com/',create_comment),
+    path('look/',look_posts)
 ]

@@ -9,21 +9,21 @@
 </head>
 <body>
     <form action="" method="POST">
-        {% csrf_token %}
         <div class="info">
-            {% for post in posts %}
+            {% csrf_token %}
             {% for com in comment %}
-            <div class="deta">
-                <p>{{post.name}}</p>
-                <p>{{post.post}}</p>
-                <p>{{com.text_of_comment}}</p>
+            {% for pos in post %}
+            <div class="main">
+                <p>{{pos.post}}</p>
+                <p>{{pos.name}}</p>
                 <p>{{com.comment}}</p>
-                <a class="button" href="/">Create comment</a>
-
+                <p>{{com.post_id}}</p>
             </div>
+            
             {% endfor %}
             {% endfor %}
         </div>
+        
         
     </form>
     

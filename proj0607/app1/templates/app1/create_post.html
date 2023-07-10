@@ -8,8 +8,8 @@
 <body>
     <form action="" method="POST">
         {% csrf_token %}
-        <input type="text" name="name" placeholder="enter name of user">
         <input type="text" name="post" placeholder="enter post of user">
+        <input type="text" name="name" placeholder="enter the name">
         <button href="/all">Send the post</button>
         <a href="/all">Подивитися коментарі</a>
     </form>
